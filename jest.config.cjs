@@ -1,8 +1,7 @@
-// jest.config.cjs o jest.config.js
 module.exports = {
-    setupFilesAfterEnv: ['@testing-library/jest-dom'],
-    testEnvironment: 'jsdom',
     transform: {
-        '^.+\\.(js|jsx)$': 'babel-jest'
-    }
+        '^.+\\.[tj]sx?$': 'babel-jest',  // Esto permite que Jest transforme archivos JS y JSX con Babel
+    },
+    testEnvironment: 'jsdom',
+    setupFilesAfterEnv: ['@testing-library/jest-dom'],
 };
